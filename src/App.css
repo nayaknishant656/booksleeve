@@ -276,14 +276,115 @@
   background: #f0f0f0;
 }
 
-.course-info {
-  padding: 25px;
+.course-card-body {
+  padding: 40px;
 }
 
-.course-info h4 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
+.course-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  gap: 15px;
 }
+
+.course-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.course-icon-box {
+  background: #fff5e6;
+  padding: 10px;
+  border-radius: 12px;
+  color: var(--primary);
+  display: flex;
+  flex-shrink: 0;
+}
+
+.course-title {
+  font-size: 1.4rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.course-level-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  background: var(--primary);
+  color: white;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.course-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.curriculum-box {
+  background: #fcfcfc;
+  border: 1px solid #f0f0f0;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.curriculum-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 15px;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.curriculum-list {
+  list-style: none;
+  padding: 0;
+}
+
+.curriculum-item {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.course-duration {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.course-cta {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 700;
+  cursor: pointer;
+  border-bottom: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 
 /* Pricing Section */
 .pricing-grid {
@@ -642,8 +743,16 @@
   }
 
   .hero-title {
-    font-size: 2.8rem;
+    font-size: 18vw;
+    width: 90vw;
+    min-height: 50vh;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
   }
+
 
   .hero-buttons {
     display: flex;
@@ -697,12 +806,34 @@
 
     padding: 30px 20px;
   }
+
+  .course-card-body {
+    padding: 25px 20px;
+  }
+
+  .course-title {
+    font-size: 1.2rem;
+  }
+
+  .course-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .course-level-badge {
+    align-self: flex-start;
+  }
+
 }
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 20vw;
+    width: 95vw;
+    min-height: 45vh;
   }
+
 
   .stat-number {
     font-size: 2.5rem;
