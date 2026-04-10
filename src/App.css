@@ -672,10 +672,26 @@
   }
 
   .testimonials-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    /* Hide scrollbar for cleaner look */
+  }
+
+  .testimonials-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-card {
+    min-width: 85%;
+    scroll-snap-align: center;
   }
 
   .form-container {
+
     padding: 30px 20px;
   }
 }
