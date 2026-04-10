@@ -46,36 +46,36 @@ const Courses = () => {
                 <div className="courses-grid">
                     {courses.map((course, idx) => (
                         <div key={idx} className="course-card">
-                            <div className="course-info" style={{ padding: '40px' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                        <div style={{ background: '#fff5e6', padding: '10px', borderRadius: '12px', color: 'var(--primary)', display: 'flex' }}>
+                            <div className="course-card-body">
+                                <div className="course-top">
+                                    <div className="course-title-group">
+                                        <div className="course-icon-box">
                                             {course.icon}
                                         </div>
-                                        <h4 style={{ fontSize: '1.4rem', margin: 0 }}>{course.title}</h4>
+                                        <h4 className="course-title">{course.title}</h4>
                                     </div>
-                                    <span className="course-level" style={{ fontSize: '0.65rem', fontWeight: '800', textTransform: 'uppercase', padding: '4px 10px', background: 'var(--primary)', color: 'white', borderRadius: '4px', whiteSpace: 'nowrap' }}>{course.level}</span>
+                                    <span className="course-level-badge">{course.level}</span>
                                 </div>
 
-                                <p style={{ fontSize: '0.95rem', color: '#666', marginBottom: '25px', lineHeight: '1.6' }}>{course.desc}</p>
+                                <p className="course-description">{course.desc}</p>
 
-                                <div className="curriculum-box" style={{ background: '#fcfcfc', border: '1px solid #f0f0f0', padding: '20px', borderRadius: '15px', marginBottom: '25px' }}>
-                                    <span style={{ fontSize: '0.75rem', fontWeight: '800', display: 'block', marginBottom: '15px', color: 'var(--accent)', letterSpacing: '1px' }}>COURSE MODULES</span>
-                                    <ul style={{ listStyle: 'none', padding: 0 }}>
+                                <div className="curriculum-box">
+                                    <span className="curriculum-label">COURSE MODULES</span>
+                                    <ul className="curriculum-list">
                                         {course.curriculum.map((item, i) => (
-                                            <li key={i} style={{ fontSize: '0.9rem', color: '#444', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                            <li key={i} className="curriculum-item">
                                                 <ChevronRight size={14} color="var(--primary)" /> {item}
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
 
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '20px', borderTop: '1px solid #eee' }}>
-                                    <span style={{ fontSize: '0.9rem', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                                <div className="course-footer">
+                                    <span className="course-duration">
                                         <Clock size={16} /> {course.duration}
                                     </span>
-                                    <span style={{ fontSize: '0.9rem', color: 'var(--accent)', fontWeight: '700', cursor: 'pointer', borderBottom: '2px solid var(--primary)', display: 'flex', alignItems: 'center', gap: '5px' }}>
-                                        Detailed Syllabus <ChevronRight size={14} />
+                                    <span className="course-cta">
+                                        Syllabus <ChevronRight size={14} />
                                     </span>
                                 </div>
                             </div>
