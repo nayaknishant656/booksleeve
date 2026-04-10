@@ -675,10 +675,11 @@
     display: flex;
     overflow-x: auto;
     gap: 20px;
-    padding-bottom: 20px;
+    padding: 0 20px 30px;
+    margin: 0 -20px;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    /* Hide scrollbar for cleaner look */
+    -ms-overflow-style: none;
   }
 
   .testimonials-grid::-webkit-scrollbar {
@@ -688,7 +689,9 @@
   .testimonial-card {
     min-width: 85%;
     scroll-snap-align: center;
+    box-shadow: var(--shadow);
   }
+
 
   .form-container {
 
