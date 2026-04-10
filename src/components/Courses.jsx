@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, PenTool, UserSecret, Rocket, ChevronRight, Clock } from 'lucide-react';
+import { BookOpen, PenTool, User, Rocket, ChevronRight, Clock } from 'lucide-react';
 
 const courses = [
     {
@@ -21,7 +21,7 @@ const courses = [
     {
         title: "Ghostwriting Excellence",
         desc: "Master the high-demand art of writing in specific client voices with professional precision.",
-        icon: <UserSecret size={24} />,
+        icon: <User size={24} />,
         level: "Advanced",
         duration: "12 Weeks Mastery",
         curriculum: ["Voice Mimicry Masterclass", "Collaborative Ethics", "Rapid Drafting Workflow"]
